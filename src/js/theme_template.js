@@ -32,8 +32,9 @@
     
     var updatedThemeStyles = initialThemeStyles;
     
+    const breathingEnabled = [BREATHING_EFFECT_ENABLE];
+
     if (!disableGlow) {
-      const breathingEnabled = [BREATHING_EFFECT_ENABLE];
       const bfunction = [BREATHING_EFFECT_TIMING_FUNCTION];
       const bduration = [BREATHING_EFFECT_SPEED];
       let bStart, bFixed, bNeonRed, bNeonPink, bYellow, bGreen, bBlue; // breathing animation strings
@@ -131,7 +132,7 @@
     `;
     /* append the remaining styles */
     updatedThemeStyles = `${updatedThemeStyles}[CHROME_STYLES]`;
-
+    if(breathingEnabled) updatedThemeStyles = `${animationThemeStyles}${updatedThemeStyles}`;
 
     themeStyleTag.innerText = updatedThemeStyles.replace(/(\r\n|\n|\r)/gm, '');
     

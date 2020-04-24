@@ -76,7 +76,7 @@ function activate(context) {
 			const themeWithGlow = jsTemplate.replace(/\[DISABLE_GLOW\]/g, disableGlow);
 			const themeWithChrome = themeWithGlow.replace(/\[CHROME_STYLES\]/g, chromeStyles);
 			const themeWithBreathing = themeWithChrome.replace(/\[BREATHING_EFFECT_ENABLE\]/, breathingEffectEnabled)
-													  .replace(/\[BREATHING_EFFECT_TIMING_FUNCTION\]/, breathingEffectFunction)
+													  .replace(/\[BREATHING_EFFECT_TIMING_FUNCTION\]/, `"${breathingEffectFunction}"`)
 													  .replace(/\[BREATHING_EFFECT_SPEED\]/, breathingEffectSpeed);
 			const finalTheme = themeWithBreathing.replace(/\[NEON_BRIGHTNESS\]/g, neonBrightness);
 			fs.writeFileSync(templateFile, finalTheme, "utf-8");

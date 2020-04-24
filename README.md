@@ -71,7 +71,21 @@ Look for the Synthwave extension folder (e.g. `robbowen.synthwave-vscode-0.1.3`)
 * `[...]/robbowen.synthwave-vscode-0.1.3/src/extension.js`
 * `[...]/robbowen.synthwave-vscode-0.1.3/src/js/theme_template.js`
 
-Folder structure is the same.
+Folder structure is the same. To enable, edit your Settings and add the following key:
+
+`"synthwave84.enableBreathing": true`
+
+### Breathing effect configuration
+* **synthwave84.breathingSpeed**:
+  * **Type**: `number`
+  * **Default**: `3`
+  * **Description**: Set the speed for the breathing effect. In seconds.
+  
+* **synthwave84.breathingFunction**:
+  * **Type**: `string`
+  * **Default**: `ease-in-out`
+  * **Description**: Set the animation function. Available functions: `ease`, `linear`, `ease-in`, `ease-out`, `ease-in-out`, `cubic-bezier`, `steps`, `step-start`, `step-end`.\
+  **See CSS reference on animation-timing-function for more details.**
 
 ## Updates
 Every time you update VS code, you will need to repeat this step to re-enable the glow.

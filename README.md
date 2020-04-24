@@ -17,6 +17,7 @@ I was a kid in the 80s but for most of my teenage life I strongly disliked nearl
 Much the same way, in the modern web-development world of shaders, React and WebGL, I feel like it's easy to forget that the basics are actually pretty damn good. To that end, this theme goes back to basics - No Shader magic. No cloud-streamed WebGL render-farms. Just plain CSS :)
 
 ## Installation
+**Read below for breathing effect.**\
 To begin with, [install the base theme from the VS Marketplace](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode). This is the way Synthwave '84 is intended to be used day-to-day. If you want to enable the gratuitous 80s glow, it needs a little extra work to get it going. 
 
 ### Disclaimer
@@ -57,6 +58,20 @@ To see the changes, you need to rerun the activation function. Open your command
 Checkout [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums 'Fix VSCode Checksums')
 
 Upon installation, open the command palette and execute `Fix Checksums: Apply`. You will need to completely restart VSCode after execution, reopening without fully exiting might not be enough.
+
+### To install this fork's breathing effect
+Go into VSCode Extensions folder located in:
+
+* **Windows**: `%USERPROFILE%\.vscode\extensions\`
+* **macOS, Linux**: `~/.vscode/extensions/`
+
+Look for the Synthwave extension folder (e.g. `robbowen.synthwave-vscode-0.1.3`) and replace the following files with the ones in this repository:
+
+* `[...]/robbowen.synthwave-vscode-0.1.3/package.json`
+* `[...]/robbowen.synthwave-vscode-0.1.3/src/extension.js`
+* `[...]/robbowen.synthwave-vscode-0.1.3/src/js/theme_template.js`
+
+Folder structure is the same.
 
 ## Updates
 Every time you update VS code, you will need to repeat this step to re-enable the glow.

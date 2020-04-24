@@ -60,6 +60,21 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Disable the glow effect, but show Synthwave '84 editor chrome updates"
+                },
+                "synthwave84.enableBreathing": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enables breathing effect on every glow. Please beware that multiple open files, depending on their length can make this effect very heavy on the system."
+                },
+                "synthwave84.breathingSpeed": {
+                    "type": "number",
+                    "default": 3,
+                    "description": "Set the speed for the breathing effect. In seconds."
+                },
+                "synthwave84.breathingFunction": {
+                    "type": "string",
+                    "default": "ease-in-out",
+                    "description": "Set the animation function. Available functions: ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier, steps, step-start, step-end. See CSS reference on animation-timing-function for more details."
                 }
             }
         }

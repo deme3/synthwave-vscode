@@ -43,6 +43,11 @@ function activate(context) {
 	const parsedBrightness = Math.floor(brightness * 255).toString(16).toUpperCase();
 	let neonBrightness = parsedBrightness;
 
+	//animation: breathing_neon_pink 1s ease-in-out 0s infinite alternate;
+	let breathingEffectEnabled = config.enableBreathing;
+	let breathingEffectSpeed = config.breathingSpeed;
+	let breathingEffectFunction = config.breathingFunction;
+
 	let disposable = vscode.commands.registerCommand('synthwave84.enableNeon', function () {
 
 		const isWin = /^win/.test(process.platform);
@@ -70,7 +75,10 @@ function activate(context) {
 			const jsTemplate = fs.readFileSync(__dirname +'/js/theme_template.js', 'utf-8');
 			const themeWithGlow = jsTemplate.replace(/\[DISABLE_GLOW\]/g, disableGlow);
 			const themeWithChrome = themeWithGlow.replace(/\[CHROME_STYLES\]/g, chromeStyles);
-			const finalTheme = themeWithChrome.replace(/\[NEON_BRIGHTNESS\]/g, neonBrightness);
+			const themeWithBreathing = themeWithChrome.replace(/\[BREATHING_EFFECT_ENABLE\]/, breathingEffectEnabled)
+													  .replace(/\[BREATHING_EFFECT_TIMING_FUNCTION\]/, breathingEffectFunction)
+													  .replace(/\[BREATHING_EFFECT_SPEED\]/, breathingEffectSpeed);
+			const finalTheme = themeWithBreathing.replace(/\[NEON_BRIGHTNESS\]/g, neonBrightness);
 			fs.writeFileSync(templateFile, finalTheme, "utf-8");
 			
 			// modify workbench html

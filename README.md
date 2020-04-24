@@ -60,7 +60,7 @@ Checkout [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemN
 Upon installation, open the command palette and execute `Fix Checksums: Apply`. You will need to completely restart VSCode after execution, reopening without fully exiting might not be enough.
 
 ### To install this fork's breathing effect
-**Make sure VS Code is not running while doing this**
+**Make sure VS Code is not running while doing this**\
 Go into VSCode Extensions folder located in:
 
 * **Windows**: `%USERPROFILE%\.vscode\extensions\`

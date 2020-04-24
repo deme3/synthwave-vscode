@@ -75,6 +75,8 @@ Folder structure is the same. To enable, edit your Settings and add the followin
 
 `"synthwave84.enableBreathing": true`
 
+After any edit to settings make sure to open Command Palette and __Enable Neon Dreams__. Sometimes it won't work until you do it twice. I'm not yet sure why.
+
 ### Breathing effect configuration
 * **synthwave84.breathingSpeed**:
   * **Type**: `number`
